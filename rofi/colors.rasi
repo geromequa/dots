@@ -1,0 +1,28 @@
+@import "../themes/current/colors.css";
+
+window {
+	background-color: transparent;
+	border-color: @foreground;
+}
+
+listview {
+	background-color: transparent;
+}
+
+inputbar {
+	background-color: @selection_background;
+	text-color: @foreground;
+}
+entry, prompt, case-indicator {
+	text-color: @foreground;
+}
+
+element normal, element-index, box {
+	background-color: @selection_background;
+	text-color: @foreground;
+}
+
+element selected {
+	background-color: @selection_background;
+	text-color: @foreground;
+}

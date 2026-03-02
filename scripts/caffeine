@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if ps aux | grep -q "[h]ypridle"; then
+	killall hypridle
+	pkill -SIGRTMIN+8 waybar
+	notify-send "" "Caffeine Enabled"
+else
+	hyprctl dispatch exec hypridle
+	pkill -SIGRTMIN+8 waybar
+	notify-send "" "Caffeine Disabled"
+fi

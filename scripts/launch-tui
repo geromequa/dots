@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+exec setsid ghostty --class=tui.$1 -e $1 & disown

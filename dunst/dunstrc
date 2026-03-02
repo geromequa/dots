@@ -1,0 +1,15 @@
+[global]
+    width = 300
+    height = 300
+    offset = (5,5)
+    font = SF Pro Display
+    format = "<i>%a</i><b>%s</b> %p\n%b"
+    corner_radius = 8
+    frame_width = 1
+    background = "#4c566a"
+    foreground = "#d8dee9"
+    frame_color = "#d8dee9"
+
+[notify-send]
+    appname = notify-send
+    format = "<b>System</b> <b>%s</b> %p\n%b"

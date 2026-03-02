@@ -1,0 +1,34 @@
+window {
+	background-color: transparent;
+	border-color: #d8dee9;
+}
+
+listview {
+	background-color: transparent;
+}
+
+inputbar {
+	background-color: #4c566a;
+	text-color: #d8dee9;
+}
+entry, prompt, case-indicator {
+	text-color: #d8dee9;
+}
+
+element {
+	background-color: transparent;
+}
+
+element.normal {
+	background-color: #4c566a;
+	text-color: #d8dee9;
+}
+
+element.selected {
+	background-color: #4c566a;
+	text-color: #d8dee9;
+}
+
+element-icon, element-text {
+	background-color: transparent;
+}

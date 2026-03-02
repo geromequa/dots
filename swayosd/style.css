@@ -1,0 +1,54 @@
+@import "../themes/current/swayosd.css";
+
+window#osd {
+  border-radius: 8px;
+  border: none;
+  background: @background-color;
+
+  #container {
+    margin: 16px;
+    background: transparent;
+  }
+
+  image,
+  label {
+    background: @label;
+    color: @label;
+  }
+
+  progressbar:disabled,
+  image:disabled {
+    opacity: 0.5;
+  }
+
+  progressbar,
+  segmentedprogress {
+    min-height: 6px;
+    border-radius: 999px;
+    background: transparent;
+    border: none;
+  }
+  
+  trough,
+  segment {
+    min-height: inherit;
+    border-radius: inherit;
+    border: none;
+    background: @progress;
+    color: @progress;
+  }
+  progress,
+  segment:active {
+    min-height: inherit;
+    border-radius: inherit;
+    border: none;
+    background: @progress;
+  }
+
+  segment {
+    margin-left: 8px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

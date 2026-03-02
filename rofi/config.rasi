@@ -1,0 +1,84 @@
+configuration {
+    font: "JetBrains Mono 10";
+    modi: "drun,filebrowser";
+    show-icons: true;
+    display-drun: "Apps";
+    display-run: "Run";
+    display-filebrowser: "Files";
+    drun-display-format: "{name}";
+    hover-select: true;
+    me-select-entry: "MouseSecondary";
+    me-accept-entry: "MousePrimary";
+    kb-cancel: "Escape";
+}
+
+window {
+    enabled: true;
+    fullscreen: false;
+    transparency: "real";
+    cursor: "default";
+    spacing: 0px;
+    padding: 10px;
+    margin: 5px;
+    border: 1.5px;
+    border-radius: 8px;
+    location: south west;
+    anchor: center;
+    width: 30%;
+    background-color: #2e3440;
+    border-color: #d8dee9;
+}
+
+inputbar {
+    enabled: true;
+    spacing: 10px;
+    padding: 15px;
+    border: 1px;
+    border-radius: 8px;
+    background-color: #4c566a;
+    text-color: #d8dee9;
+}
+
+entry, prompt {
+    enabled: true;
+    border-radius: 8px;
+    cursor: text;
+    placeholder: "Search...";
+    placeholder-color: inherit;
+    text-color: #d8dee9;
+}
+case-indicator, num-filtered-rows, num-rows {
+    text-color: #d8dee9;
+}
+listview {
+    enabled: true;
+    columns: 1;
+    lines: 4;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    reverse: false;
+    fixed-height: true;
+    fixed-columns: true;
+    spacing: 5px;
+    padding: 10px;
+    margin: 0px;
+    border: 0px;
+}
+
+element {
+    padding: 3px;
+    vertical-align: 0.5;
+    border-radius: 8px;
+}
+
+element normal.normal, element alternate.normal {
+	background-color: #2e3440;
+	text-color: #d8dee9;
+}
+
+element selected.normal, element selected.urgent {
+	background-color: #4c566a;
+	text-color: #d8dee9;
+}

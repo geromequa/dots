@@ -1,0 +1,140 @@
+
+@keyframes blink-warning {
+    70% {
+        color: @foreground;
+    }
+
+    to {
+        color: @foreground;
+        background-color: @warning;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+      color: @foreground;
+    }
+
+    to {
+        color: @foreground;
+        background-color: @warning;
+    }
+}
+
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 3px;
+    min-height: 0;
+    margin: 0.2em 0.3em 0.2em 0.3em;
+}
+
+@import "../themes/current/colors.css";
+/* The whole bar */
+#waybar {
+    background: transparent;
+    color: @foreground;
+    font-family: "SF Pro Display Bold";
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Each critical module */
+#battery.critical {
+    color: @warning;
+}
+
+/* Each critical that should blink */
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+/* Each warning */
+#network.disconnected,
+#battery.warning {
+    background: @background;
+    color: @warning;
+}
+
+/* Each warning that should blink */
+#battery.warning.discharging {
+    animation-name: blink-warning;
+    animation-duration: 3s;
+}
+
+/* Workspaces stuff */
+
+#workspaces button {
+    font-weight: bold; /* Somewhy the bar-wide setting is ignored*/
+    min-width: 21px;
+    padding: 0 2px;
+    font-size: 1em;
+    background: @selection_background;
+    color: @foreground;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
+#bluetooth {
+    background: @selection_background;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0 0.6em;
+}
+
+#network {
+    background: @selection_background;
+    padding: 0 10px;
+}
+
+#battery {
+    background: @selection_background;
+    padding: 0 10px;
+}
+
+#clock {
+    background: @selection_background;
+    color: @foreground;
+    padding: 0 10px;
+}
+#clock.date {
+    background: @selection_background;
+}
+
+#clock.time {
+    background: @selection_background;
+}
+
+#pulseaudio { /* Unsused but kept for those who needs it */
+    background: @selection_background;
+    color: @foreground;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+#tray {
+    background: @selection_background;
+    padding: 0 5px;
+}
+#custom-caffeine {
+    background: @selection_background;
+    color: @foreground;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+tooltip {
+  color: @foreground;
+  background-color: @selection_background;
+  text-shadow: none;
+}

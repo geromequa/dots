@@ -1,0 +1,10 @@
+[Default Applications]
+x-scheme-handler/mailto=userapp-Thunderbird-XARYI3.desktop
+message/rfc822=userapp-Thunderbird-XARYI3.desktop
+x-scheme-handler/mid=userapp-Thunderbird-XARYI3.desktop
+application/pdf=firefox.desktop
+
+[Added Associations]
+x-scheme-handler/mailto=userapp-Thunderbird-XARYI3.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-XARYI3.desktop;
+application/pdf=firefox.desktop;
